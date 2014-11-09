@@ -16,6 +16,8 @@ $page_description = "This it the UWAFT home page";
 $page_css = array("<link href=\"css/carousel.css\" rel=\"stylesheet\">");
 //put each needed meta data as a element in this array
 $page_meta = array();
+//put needed javascript script here
+$page_js = array();
 include_once "includes/header.php";
 ?>
 
@@ -31,7 +33,7 @@ include_once "includes/header.php";
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="img/CarSign.jpg" class="img-responsive" alt="First slide">
+                <img src="images/home_CarSign.jpg" class="img-responsive" alt="First slide">
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>Eco Car <br /></h1>
@@ -41,7 +43,7 @@ include_once "includes/header.php";
                 </div>
             </div>
             <div class="item">
-                <img src="img/Car2.2.jpg" class="img-responsive" alt="Second slide">
+                <img src="images/home_Car2.jpg" class="img-responsive" alt="Second slide">
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>Another example headline.</h1>
@@ -51,7 +53,7 @@ include_once "includes/header.php";
                 </div>
             </div>
             <div class="item">
-                <img src="img/Car3.jpg" class="img-responsive" alt="Third slide">
+                <img src="images/home_Car3.jpg" class="img-responsive" alt="Third slide">
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>WoW</h1>

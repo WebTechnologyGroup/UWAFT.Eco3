@@ -1,7 +1,7 @@
 <?php
 /*  footer.php
  *  the footer for all pages, it includes the social media buttons
- * 
+ *
  *   Revision
  * 	Created by Terence at 10/29/2014
  *      Modified to adapt new template by Terence: 11/04/2014
@@ -17,7 +17,7 @@
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="/UWAFT/bootstrap/js/bootstrap.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
 
 </body>
 </html>
