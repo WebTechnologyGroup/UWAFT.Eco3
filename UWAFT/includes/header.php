@@ -6,8 +6,8 @@
  * 	Created by Terence at 10/29/2014
  *      Modified to adapt new template by Terence: 11/04/2014
  */
- 
- include_once "includes/utilities.php";
+
+include_once "includes/utilities.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,19 +41,19 @@
                 echo $css;
             }
         }
-		
-		//echo javascript files
-		if (isset($page_js) && is_array($page_js)) {
+
+        //echo javascript files
+        if (isset($page_js) && is_array($page_js)) {
             foreach ($page_js as $js) {
                 echo $js;
             }
         }
         ?>
-		
+
         <link href="/css/navbar-fixed-top.css" rel="stylesheet">
-		<script src = "/js/jquery-1.11.1.js"></script>
-		
-		
+        <script src = "/js/jquery-1.11.1.js"></script>
+
+
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -61,11 +61,11 @@
         <![endif]-->
     </head>
     <body>
-	<script>
-		$(document).ready(function() {
-});
-		
-		</script>
+        <script>
+            $(document).ready(function () {
+            });
+
+        </script>
         <!-- Fixed navbar -->
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
@@ -76,22 +76,57 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">UWAFT</a>
+                    <a id="pageTitle" class="navbar-brand" href="#">UWAFT</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li <?php if(getCurrentFilename()=="index.php") echo "class=\"active\"" ?>><a href="index.php">Home</a></li>
-                        <li <?php if(getCurrentFilename()=="carpage.php") echo "class=\"active\"" ?>><a href="carpage.php">Vehicle</a></li>
-                        <li <?php if(getCurrentFilename()=="teampage.php") echo "class=\"active\"" ?>><a href="teampage.php">Team</a></li>
-                        <li <?php if(getCurrentFilename()=="#Sponsorship") echo "class=\"active\"" ?>><a href="#Sponsorship">Sponsorship</a></li>
+                        <li <?php if (getCurrentFilename() == "index.php") echo "class=\"active\"" ?>><a href="index.php">Home</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Environment <span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">About us<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Teaching Tool</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Outreach Information</a></li>
+                                <li><a href="#">History</a></li>
+                                <li><a href="#">Our Mission and Vission</a></li>
                             </ul>
                         </li>
+                        <li class="dropdown <?php if (getCurrentFilename() == "carpage.php") echo "active" ?> ">
+                            <a href="carpage.php" class="dropdown-toggle">Our Fleet<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="carpage.php">1999 Chevrolet Silverado</a></li>
+                                <li><a href="carpage.php">2005 Chevrolet Equinox</a></li>
+                                <li><a href="#">2009 Saturn Vue</a></li>
+                                <li><a href="#">2013 Chevrolet Malibu</a></li>
+                                <li><a href="#">201? Chevrolet Camaro</a></li>
+                            </ul>
+                        </li>
+                        <li <?php if (getCurrentFilename() == "teampage.php") echo "class=\"active\"" ?>><a href="teampage.php">Team</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Calendar<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Public Events</a></li>
+                                <li><a href="#">Team Schedule</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Environment and Sustainability</a></li>
+                                <li><a href="#">Benefits of hybrids</a></li>
+                                <li><a href="#">Classroom tools</a></li>
+                                <li><a href="#">Savings Calculator</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Sponsors<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Competition Sponsors</a></li>
+                                <li><a href="#">UWAFT Sponsors</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Want to Sponsor UWAFT</a>
+                                </li>
+                            </ul>
+                        </li>
+
+
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="/blog/wordpress/">Blog</a></li>
@@ -101,6 +136,6 @@
                 </div><!--/.nav-collapse -->
             </div>
         </div>
-		
-		
+
+
 

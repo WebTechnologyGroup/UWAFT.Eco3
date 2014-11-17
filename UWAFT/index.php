@@ -1,4 +1,5 @@
 <?php
+/* Template Name: Home */
 /*  index.php
  * home pages
 

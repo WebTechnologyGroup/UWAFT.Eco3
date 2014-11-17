@@ -1,5 +1,5 @@
 .navbar {
-   opacity: 0.9; 
+    opacity: 0.9; 
     -moz-opacity: 0.9; 
     -webkit-opacity: 0.9; 
 }
@@ -7,3 +7,20 @@
 .navbar li { 
     font-size: 18px;
 } 
+
+@font-face {
+    font-family: "Formation Sans Regular";
+    src: url("/Fonts/Formation Sans Regular.ttf");
+}
+
+#pageTitle
+{
+    font:  italic 30px "Formation Sans Regular", arial;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-menu {
+    margin-top: 0px;
+}
