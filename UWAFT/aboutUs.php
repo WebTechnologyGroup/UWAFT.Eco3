@@ -101,7 +101,7 @@ include_once 'includes/header.php';
                 <ul class="timeline">
                     <li>
                         <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="images/car1.jpg" alt="">
+                            <img class="img-circle img-responsive" src="images/carModel.jpg" alt="">
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
@@ -115,7 +115,7 @@ include_once 'includes/header.php';
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="images/info3.jpg" alt="">
+                            <img class="img-circle img-responsive" src="images/carModel2.jpg" alt="">
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
@@ -129,7 +129,7 @@ include_once 'includes/header.php';
                     </li>
                     <li>
                         <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="images/about/3.jpg" alt="">
+                            <img class="img-circle img-responsive" src="images/carModel.jpg" alt="">
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
@@ -143,7 +143,7 @@ include_once 'includes/header.php';
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="images/about/4.jpg" alt="">
+                            <img class="img-circle img-responsive" src="images/carModel2.jpg" alt="">
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
@@ -157,7 +157,7 @@ include_once 'includes/header.php';
                     </li>
                     <li>
                         <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="images/about/3.jpg" alt="">
+                            <img class="img-circle img-responsive" src="images/carModel.jpg" alt="">
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
@@ -171,7 +171,7 @@ include_once 'includes/header.php';
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="images/about/4.jpg" alt="">
+                            <img class="img-circle img-responsive" src="images/carModel2.jpg" alt="">
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
@@ -185,7 +185,7 @@ include_once 'includes/header.php';
                     </li>
                     <li>
                         <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="images/about/3.jpg" alt="">
+                            <img class="img-circle img-responsive" src="images/carModel.jpg" alt="">
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
