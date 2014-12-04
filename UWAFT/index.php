@@ -1,4 +1,8 @@
 <?php
+
+
+/* Add a comment*/
+
 /* Template Name: Home */
 /*  index.php
  * home pages
