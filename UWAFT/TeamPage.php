@@ -3,11 +3,11 @@
 <!-- Team Page
          UWAFT Team Page Website
          HTML 5 and PHP technologies used
-         
+
          Revision History
                 Thida Pao, 2014.11.04: Complete redesign of Team Page
                 Terene,    2014.11.05: re-organized the html page to php with header and footer
-                
+
 -->
 
 <?php
@@ -24,16 +24,17 @@ $page_js = array();
 include_once "includes/header.php";
 ?>
 <center>
-    <img src="images/teamAmerica.jpg">
+    <img src="images/teamAmerica.jpg" class="img-responsive">
 </center>
 <p></p>
 <p></p>
 <div class="container marketing">
+<h2 class="featurette-heading"><span class="text-muted">The Team</span> </h2>
     <div class="row">
         <div class="col-lg-4">
-            <img src="images/team_profile1.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+            <img src="images/team_profile1.jpg"  alt="Generic placeholder image" >
             <h2>Manager</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>         
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
             <img src="images/team_profile2.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
@@ -51,7 +52,7 @@ include_once "includes/header.php";
         <div class="col-lg-4">
             <img src="images/team_profile4.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
             <h2>Manager</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>         
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
             <img src="images/team_profile5.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
@@ -69,7 +70,7 @@ include_once "includes/header.php";
         <div class="col-lg-4">
             <img src="images/team_profile7.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
             <h2>Manager</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>         
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
             <img src="images/team_profile8.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
@@ -87,7 +88,7 @@ include_once "includes/header.php";
         <div class="col-lg-4">
             <img src="images/team_profile10.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
             <h2>Manager</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>         
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
             <img src="images/team_profile11.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">

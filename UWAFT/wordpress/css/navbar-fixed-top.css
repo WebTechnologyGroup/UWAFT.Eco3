@@ -1,0 +1,9 @@
+.navbar {
+   opacity: 0.9; 
+    -moz-opacity: 0.9; 
+    -webkit-opacity: 0.9; 
+}
+
+.navbar li { 
+    font-size: 18px;
+} 

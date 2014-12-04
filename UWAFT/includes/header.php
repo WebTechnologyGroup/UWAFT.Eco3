@@ -32,7 +32,7 @@ include_once "includes/utilities.php";
         <title><?php if (isset($page_title)) echo $page_title; ?></title>
 
         <!-- required for header -->
-        <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- echo all required css if page's css is set -->
         <?php
@@ -50,8 +50,7 @@ include_once "includes/utilities.php";
         }
         ?>
 
-        <link href="/css/navbar-fixed-top.css" rel="stylesheet">
-        <script src = "/js/jquery-1.11.1.js"></script>
+        <link href="css/navbar-fixed-top.css" rel="stylesheet">
 
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -70,53 +69,51 @@ include_once "includes/utilities.php";
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a id="pageTitle" class="navbar-brand" href="#">UWAFT</a>
+                    <a class="navbar-brand" rel="home" href="index.php" title="UWAFT">
+                        <img id="logo" src="images/ecologo.png">
+                    </a>
+                    <!--<a id="pageTitle" class="navbar-brand" href="#">UWAFT</a>-->
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li <?php if (getCurrentFilename() == "index.php") echo "class=\"active\"" ?>><a href="index.php">Home</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">About us<span class="caret"></span></a>
+                        
+                        <li class="dropdown <?php if (getCurrentFilename() == "aboutUs.php") echo "active"; ?>">
+                            <a href="aboutUs.php" class="dropdown-toggle">About us<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">History</a></li>
-                                <li><a href="#">Our Mission and Vission</a></li>
+                                <li><a href="aboutUs.php#services">History</a></li>
+                                <li><a href="aboutUs.php#missionVision">Our Mission and Vission</a></li>
                             </ul>
                         </li>
                         <li class="dropdown <?php if (getCurrentFilename() == "carpage.php") echo "active" ?> ">
                             <a href="carpage.php" class="dropdown-toggle">Our Fleet<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="carpage.php">1999 Chevrolet Silverado</a></li>
-                                <li><a href="carpage.php">2005 Chevrolet Equinox</a></li>
-                                <li><a href="#">2009 Saturn Vue</a></li>
-                                <li><a href="#">2013 Chevrolet Malibu</a></li>
-                                <li><a href="#">201? Chevrolet Camaro</a></li>
+                                <li><a href="carPage.php#present">201? Chevrolet Camaro</a></li>
+                                <li><a href="carPage.php#2013">2013 Chevrolet Malibu</a></li>
+                                <li><a href="carPage.php#2009">2009 Saturn Vue</a></li>
+                                <li><a href="carPage.php#2005">2005 Chevrolet Equinox</a></li>
+                                <li><a href="carPage.php#1999">1999 Chevrolet Silverado</a></li>
                             </ul>
                         </li>
-                        <li <?php if (getCurrentFilename() == "teampage.php") echo "class=\"active\"" ?>><a href="teampage.php">Team</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Calendar<span class="caret"></span></a>
+                        <li <?php if (getCurrentFilename() == "teampage.php") echo "class=\"active\""; ?>><a href="teampage.php">Team</a></li>
+                        <li class="dropdown <?php if (getCurrentFilename() == "publicEvent.php") echo "active"; ?>">
+                            <a href="publicEvent.php" class="dropdown-toggle">Calendar<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Public Events</a></li>
+                                <li  <?php if (getCurrentFilename() == "publicEvent.php") echo "class=\"active\"" ?>><a href="publicEvent.php">Public Events</a></li>
                                 <li><a href="#">Team Schedule</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle">Resources <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="#">Environment and Sustainability</a></li>
                                 <li><a href="#">Benefits of hybrids</a></li>
                                 <li><a href="#">Classroom tools</a></li>
-                                <li><a href="#">Savings Calculator</a></li>
+                                <li><a href="savingCal.php">Savings Calculator</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Sponsors<span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle">Our Sponsors<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="#">Competition Sponsors</a></li>
                                 <li><a href="#">UWAFT Sponsors</a></li>
@@ -125,14 +122,21 @@ include_once "includes/utilities.php";
                                 </li>
                             </ul>
                         </li>
-
-
+			<li><a href="/blog/wordpress/">Blog</a></li>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
+                    <!-- search form -->
+                    <form class="navbar-form navbar-right" role="search" action="http://www.google.ca/search" method="GET">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." name="q">
+                        </div>
+                        <button type="submit" class="btn btn-default">Go</button>
+                    </form>
+                    <!--<ul class="nav navbar-nav navbar-right">
                         <li><a href="/blog/wordpress/">Blog</a></li>
-                        <li><a href="#contact">Contact us</a></li>
-                        <!--<li class="active"><a href="./">Fixed top</a></li>-->
-                    </ul>
+                        <li><a href="#contact">Contact us</a></li>-->
+                        <!--<li class="active"><a href="./">Fixed top</a></li>
+                    </ul>-->
+                    
                 </div><!--/.nav-collapse -->
             </div>
         </div>

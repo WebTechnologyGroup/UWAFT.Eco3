@@ -5,7 +5,7 @@
 }
 
 .navbar li { 
-    font-size: 18px;
+    font-size: 16px;
 } 
 
 @font-face {
@@ -16,11 +16,17 @@
 #pageTitle
 {
     font:  italic 30px "Formation Sans Regular", arial;
+    padding:5px 10px 5px 0px;
 }
 
-.dropdown:hover .dropdown-menu {
+.nav .dropdown:hover .dropdown-menu {
     display: block;
 }
-.dropdown-menu {
+.nav .dropdown-menu {
     margin-top: 0px;
+}
+
+#logo{
+    max-width:100px !important; 
+    margin-top: -7px;
 }
