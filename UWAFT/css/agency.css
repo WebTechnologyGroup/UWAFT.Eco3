@@ -34,9 +34,6 @@ a.active {
     outline: 0;
 }
 
-a {
-    color: #fed136;
-}
 
 a:hover,
 a:focus,
@@ -68,7 +65,7 @@ h6 {
     background-color: #222;
 }
 
-.btn-primary {
+.btn-primary:not(.btn){
     border-color: #fed136;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -624,25 +621,6 @@ section#contact .text-danger {
     color: #e74c3c;
 }
 
-footer {
-    padding: 25px 0;
-    text-align: center;
-}
-
-footer span.copyright {
-    text-transform: uppercase;
-    text-transform: none;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    line-height: 40px;
-}
-
-footer ul.quicklinks {
-    margin-bottom: 0;
-    text-transform: uppercase;
-    text-transform: none;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    line-height: 40px;
-}
 
 ul.social-buttons {
     margin-bottom: 0;

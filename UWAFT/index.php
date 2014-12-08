@@ -102,6 +102,7 @@ include_once "includes/header.php";
           <p><a class="btn btn-default" href="wordpress/index.php" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
+</div>
 
     <?php
     include_once "includes/footer.php";

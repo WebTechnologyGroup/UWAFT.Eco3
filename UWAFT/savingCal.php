@@ -20,9 +20,7 @@ include_once 'includes/header.php';
 <link href="css/slider.css" rel="stylesheet" type="text/css" />
 <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
 <link href="css/savCal.css" rel="stylesheet" type="text/css" />
-<div class="container">
-    <br><br>
-
+<div class="container needSpaceBetweenHeader">
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
@@ -313,7 +311,7 @@ include_once 'includes/footer.php';
             $("#eleBill").text('$0.00');
             $("#totalBill").text('$'+bill);
             $("#saving").text('$'+(currentBill - bill).toFixed(2));
-            $("#costPayback").text('$'+bill);
+            $("#costPayback").text('$'+calculateAddCostPayback(chosenCar, currentBill - bill).toFixed(2));
             $("#workCompa").text(isWorkCompatible(chosenCar));
         }
         //hybird plugin

@@ -1,7 +1,7 @@
 .navbar {
     opacity: 0.9; 
     -moz-opacity: 0.9; 
-    -webkit-opacity: 0.9; 
+    -webkit-opacity: 0.9;
 }
 
 .navbar li { 
@@ -22,11 +22,11 @@
 .nav .dropdown:hover .dropdown-menu {
     display: block;
 }
-.nav .dropdown-menu {
-    margin-top: 0px;
+.needSpaceBetweenHeader{
+    margin-top: 60px;
 }
 
 #logo{
-    max-width:100px !important; 
+    max-width:160px !important; 
     margin-top: -7px;
 }

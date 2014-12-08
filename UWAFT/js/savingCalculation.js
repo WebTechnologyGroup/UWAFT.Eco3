@@ -126,7 +126,7 @@ function calculateElectricBill(type, car){
 //calculate additional Cost Payback
 function calculateAddCostPayback(car, saving){
     var result = (CAR_MSRP[car] - CAR_MSRP.Current - Government_Subsity[car])/saving;
-    return result >=0 ? result : 0;
+    return result >=0 ? Math.ceil(result) : 0;
 }
 //check if car is work compatible
 function isWorkCompatible(car){

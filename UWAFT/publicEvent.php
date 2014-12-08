@@ -24,9 +24,7 @@ $page_meta = array("<meta content='width=device-width, initial-scale=1, maximum-
 $page_js = array();
 include_once "includes/header.php";
 ?>
-    <br><br>
-
-    <section class="container">
+    <div class="container needSpaceBetweenHeader">
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
@@ -83,7 +81,7 @@ include_once "includes/header.php";
                         ?>
 
         </section><!-- /.content -->
-    </section><!-- / container -->
+    </div><!-- / container -->
 
     <?php include_once 'includes/footer.php'; ?>
 

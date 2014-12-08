@@ -51,6 +51,8 @@ include_once "includes/utilities.php";
         ?>
 
         <link href="css/navbar-fixed-top.css" rel="stylesheet">
+        <link href="css/footer.css" rel="stylesheet">
+        <link href="css/font-awesome.css" rel="stylesheet">
 
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -67,7 +69,6 @@ include_once "includes/utilities.php";
         </script>
         <!-- Fixed navbar -->
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" rel="home" href="index.php" title="UWAFT">
                         <img id="logo" src="images/ecologo.png">
@@ -76,7 +77,7 @@ include_once "includes/utilities.php";
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li <?php if (getCurrentFilename() == "index.php") echo "class=\"active\"" ?>><a href="index.php">Home</a></li>
+                        <!--<li <?php if (getCurrentFilename() == "index.php") echo "class=\"active\"" ?>><a href="index.php">Home</a></li>-->
                         
                         <li class="dropdown <?php if (getCurrentFilename() == "aboutUs.php") echo "active"; ?>">
                             <a href="aboutUs.php" class="dropdown-toggle">About us<span class="caret"></span></a>
@@ -100,7 +101,7 @@ include_once "includes/utilities.php";
                             <a href="publicEvent.php" class="dropdown-toggle">Calendar<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li  <?php if (getCurrentFilename() == "publicEvent.php") echo "class=\"active\"" ?>><a href="publicEvent.php">Public Events</a></li>
-                                <li><a href="#">Team Schedule</a></li>
+                                <li><a href="teamSchedule.php">Team Schedule</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -122,14 +123,15 @@ include_once "includes/utilities.php";
                                 </li>
                             </ul>
                         </li>
-			<li><a href="/blog/wordpress/">Blog</a></li>
+			             <li><a href="/blog/wordpress/">Blog</a></li>
                     </ul>
+                    
                     <!-- search form -->
-                    <form class="navbar-form navbar-right" role="search" action="http://www.google.ca/search" method="GET">
-                        <div class="form-group">
+                    <form class="navbar-form navbar-right form-inline" role="search" action="http://www.google.ca/search" method="GET" style="margin-right:10px;">
+                        <div class="form-group has-feedback">
                             <input type="text" class="form-control" placeholder="Search..." name="q">
+                            <span class="glyphicon glyphicon-search form-control-feedback"></span>
                         </div>
-                        <button type="submit" class="btn btn-default">Go</button>
                     </form>
                     <!--<ul class="nav navbar-nav navbar-right">
                         <li><a href="/blog/wordpress/">Blog</a></li>
@@ -138,7 +140,6 @@ include_once "includes/utilities.php";
                     </ul>-->
                     
                 </div><!--/.nav-collapse -->
-            </div>
         </div>
 
 
