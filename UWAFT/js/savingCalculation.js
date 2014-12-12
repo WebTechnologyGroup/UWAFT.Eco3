@@ -17,7 +17,7 @@ var Hybird_Modes = {
     "Toyota Prius Plug in" : 4.7,
     "Chevrolet Volt" : 6.4,
     "Ford C-Max Plug in" : 6.2,
-    "BMW i3 REx " : 6
+    "BMW i3 REx" : 6
 };
 // EV model
 var EV_Modes = {
@@ -100,12 +100,28 @@ function calculatePetrolBill(type, car){
     //Hybird car
     if(type == 1){
         var mode = (typeof Hybird_Modes[car] != 'undefined')?Hybird_Modes[car]:0;
-        return ((totalYearDriving / 100) * mode * priceOfGas).toFixed(2);
+        return +((totalYearDriving / 100) * mode * priceOfGas).toFixed(2);
     }
     //Plug in Hybird
     else if(type == 2){
-        
+        //using '+' to force it return a number
+        return +calHybirdPlugInPetrolBill(car).toFixed(2);
     }
+    else return 0;
+}
+//calculate plug in hybird car petrol bill
+function calHybirdPlugInPetrolBill(car){
+    var GAS_KM = disToWork * 2 - Electric_Range[car];
+    if(GAS_KM < 0)GAS_KM = 0;
+    
+    var gasPerYear = GAS_KM * 250;
+    
+    var errorCheck = disToWork * 2 * 250 > totalYearDriving ? "Error":"Good";
+    var remainingDis = totalYearDriving - disToWork * 500;
+    var remainingEleKm = remainingDis * Utility_Factor[car];
+    var remainingGasKm = remainingDis - remainingEleKm;
+    
+    return (gasPerYear + remainingGasKm) / 100 * Hybird_Modes[car] * priceOfGas;
 }
 
 //calculate Electrical bill for different cars
@@ -113,14 +129,29 @@ function calculatePetrolBill(type, car){
 // type = 2 => Plug in Hybird
 function calculateElectricBill(type, car){
     //Electric car
-    if(type == 1){
+    if(type == 3){
         var evMode = typeof EV_Modes[car] != 'undefined'?EV_Modes[car]:0;
-        return (totalYearDriving / 100 * evMode * priceOfElec).toFixed(2);
+        return +(totalYearDriving / 100 * evMode * priceOfElec).toFixed(2);
     }
     //Plug in Hybird
     else if(type == 2){
-        
+        //using '+' to force it return a number
+        return +calHybirdPlugInElecBill(car).toFixed(2);
     }
+    else return 0;
+}
+
+//calculate plug in hybird car electric bill
+function calHybirdPlugInElecBill(car){
+    
+    var ELE_KM = disToWork * 2 > Electric_Range[car] ? Electric_Range[car] : disToWork * 2;
+    var elePerYear = ELE_KM * 250;
+    
+    var errorCheck = disToWork * 2 * 250 > totalYearDriving ? "Error":"Good";
+    var remainingDis = totalYearDriving - disToWork * 500;
+    var remainingEleKm = remainingDis * Utility_Factor[car];
+    
+    return (elePerYear + remainingEleKm) / 100 * EV_Modes[car] * priceOfElec;
 }
 
 //calculate additional Cost Payback

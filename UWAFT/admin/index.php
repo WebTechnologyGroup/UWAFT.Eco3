@@ -13,8 +13,8 @@
         <meta charset="UTF-8">
         <title>UWAFT | Admin Page</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../css/font-awesome.css" rel="stylesheet" type="text/css" />
         <!-- Theme style -->
         <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -64,13 +64,18 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li>
-                            <a href="teamScheduleManagement.html">
+                            <a href="teamScheduleManagement.php">
                                 <i class="fa fa-dashboard"></i> <span>Team Schedule</span>
                             </a>
                         </li>
                         <li>
                             <a href="publicEventManagement.php">
                                 <i class="fa fa-calendar"></i> <span>Public Events</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="teamform.php">
+                                <i class="fa fa-user"></i> <span>Team Members</span>
                             </a>
                         </li>
 
@@ -107,66 +112,9 @@
             </aside><!-- /.right-side -->
         </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="//code.jquery.com/ui/1.11.1/jquery-ui.min.js" type="text/javascript"></script>
-        <script>
-                            $('#saveButton').click(function () {
-                                $('#eventForm').submit();
-                            });
-                            $('#updateEventButton').click(function () {
-                                $('#updateEventForm').submit();
-                            });
-                            $('.deleteButton').on('click', function (e) {
-                                var url = "publicEventManagement.php?deleteButton=";
-                                window.location = url.concat(e.target.id);
-                            });
-                            $('.editButton').on('click', function (e) {
-                                
-                            });
-        </script>
-        <!--edit event Modal -->
-        <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h3 class="modal-title" id="myModalLabel">Update event</h3>
-                    </div>
-                    <div class="modal-body">
-                        <form id="updateEventForm" name="updateEventForm" action="publicEventManagement.php" method="post" onsubmit="return isEventFormValid();">
-                            <div>
-                                <label for="title">Title</label> <br>
-                                <input type="text" placeholder="title" id="title" name="title" value="<?php echo $updateTitle; ?>"/>
-                            </div>
-
-                            <div>
-                                <label for="message">Message</label><br>
-                                <input type="text" placeholder="message" id="message" name="message" value="<?php echo $row["Message"]; ?>"/>
-                            </div>
-
-                            <div>
-                                <label for="date">Date</label><br>
-                                <input type="date" placeholder="yyyy-mm-dd" id="date" name="date" value="<?php echo $row["Date"]; ?>"/>
-                            </div>			
-
-                            <div>
-                                <label for="time">Time</label><br>
-                                <input type="time" placeholder="hh:mm:ss" id="time" name="time" value="<?php echo $row["Time"]; ?>"/>
-                            </div>
-
-                            <input type="hidden" name="type" value="add" />
-                            <br>
-
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" id="updateEventButton">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div> <!--end edit event Modal -->
+        <script src="../js/jquery-2.1.1.min.js"></script>
+        <script src="../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui.min.js" type="text/javascript"></script>
     </body>
 </html>
 

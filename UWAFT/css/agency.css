@@ -26,21 +26,6 @@ p.large {
     font-size: 16px;
 }
 
-a,
-a:hover,
-a:focus,
-a:active,
-a.active {
-    outline: 0;
-}
-
-
-a:hover,
-a:focus,
-a:active,
-a.active {
-    color: #fec503;
-}
 
 h1,
 h2,
@@ -65,65 +50,16 @@ h6 {
     background-color: #222;
 }
 
-.btn-primary:not(.btn){
-    border-color: #fed136;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
-    color: #fff;
-    background-color: #fed136;
-}
-
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active,
-.btn-primary.active,
-.open .dropdown-toggle.btn-primary {
-    border-color: #f6bf01;
-    color: #fff;
-    background-color: #fec503;
-}
-
-.btn-primary:active,
-.btn-primary.active,
-.open .dropdown-toggle.btn-primary {
-    background-image: none;
-}
-
-.btn-primary.disabled,
-.btn-primary[disabled],
-fieldset[disabled] .btn-primary,
-.btn-primary.disabled:hover,
-.btn-primary[disabled]:hover,
-fieldset[disabled] .btn-primary:hover,
-.btn-primary.disabled:focus,
-.btn-primary[disabled]:focus,
-fieldset[disabled] .btn-primary:focus,
-.btn-primary.disabled:active,
-.btn-primary[disabled]:active,
-fieldset[disabled] .btn-primary:active,
-.btn-primary.disabled.active,
-.btn-primary[disabled].active,
-fieldset[disabled] .btn-primary.active {
-    border-color: #fed136;
-    background-color: #fed136;
-}
-
-.btn-primary .badge {
-    color: #fed136;
-    background-color: #fff;
-}
-
 .btn-xl {
-    padding: 20px 40px;
-    border-color: #fed136;
+    padding: 10px 40px;
+    border-color: #f6bf01;
     border-radius: 3px;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 18px;
     font-weight: 700;
     color: #fff;
-    background-color: #fed136;
+    background-color: #f6bf01;
 }
 
 .btn-xl:hover,
@@ -166,11 +102,13 @@ fieldset[disabled] .btn-xl.active {
     background-color: #fff;
 }
 
+
+
 header {
     text-align: center;
     color: white;
     background-attachment: scroll;
-    background-image: url(../images/background2.jpg);
+    background-image: url(../images/background%20copy.jpg);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -230,7 +168,7 @@ section {
 }
 
 section h2.section-heading {
-    margin-top: 35px;
+    margin-top: 5px;
     margin-bottom: 15px;
     font-size: 40px;
     text-transform: none;
@@ -621,6 +559,25 @@ section#contact .text-danger {
     color: #e74c3c;
 }
 
+footer {
+    padding: 25px 0;
+    text-align: center;
+}
+
+footer span.copyright {
+    text-transform: uppercase;
+    text-transform: none;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 40px;
+}
+
+footer ul.quicklinks {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    text-transform: none;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 40px;
+}
 
 ul.social-buttons {
     margin-bottom: 0;
@@ -745,4 +702,112 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #fed136;
+}
+
+.whyBecome {
+    margin-bottom: 20px;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #333;
+    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.textWhyRight {
+    padding: 10px 15px 10px 15px;
+    width: 50%;
+    height: 400px;
+    float: left;
+    display: inline-block;
+}
+
+.textWhyLeft {
+    padding: 10px 15px 10px 15px;
+    width: 50%;
+    height: 400px;
+    float: left;
+    display: inline-block;
+}
+
+.leftFrame {
+    padding: 10px 15px 10px 15px;
+    width: 50%;
+    height: 400px;
+    float: left;
+}
+
+.rightFrame {
+    padding: 10px 15px 10px 15px; 
+    width: 50%;
+    height: 400px;
+    float: left;
+}
+
+.row featurette {
+    display: inline-block;
+    width: 980px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.featurette-heading {
+    margin: 0 0 15px 0;
+    text-align:center;
+}
+
+.container h1 {
+    margin: 90px 0 10px 0;
+}
+
+.EmailUs {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #333;
+    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.EmailUWAFT {
+    color: #3BAF29;
+}
+
+ul.listOfSponsorsUl {
+    list-style: circle; 
+    margin: 0 10px 0 10px;
+    list-style-type:circle;
+    display: inline-block;
+}
+
+ul.listOfSponsorsUl.left {
+    float: left;
+}
+
+ul.listOfSponsorsUl.right {
+    float: right;
+}
+
+.listOfSponsorsUl li {
+    list-style: circle; 
+    width:inherit;
+    height:inherit;
+    float: none;
+}
+
+body ul.listOfSponsorsUl li{
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #333;
+    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+.featurette-heading {
+    font-size: 21px;
 }

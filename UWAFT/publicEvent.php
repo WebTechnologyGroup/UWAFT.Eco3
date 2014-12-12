@@ -14,7 +14,7 @@ $page_title = "Public Event";
 $page_author = "Weiwei Chen";
 $page_description = "This it the public event page";
 //put each needed css link as a element in this array
-$page_css = ["<link href=\"css/AdminLTE.css\" rel=\"stylesheet\" type=\"text/css\" />",
+$page_css = [
     "<link href=\"//code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css\" rel=\"stylesheet\" type=\"text/css\" />",
     "<link href=\"//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css\" rel=\"stylesheet\" type=\"text/css\"/>"
 ];

@@ -8,6 +8,7 @@
  */
 ?>
 
+<link href="css/footer.css" rel="stylesheet">
 <link href="../bootstrap/css/bootstrap-social.css" rel="stylesheet">
 <div id="footer">
     <div class="container" role="contentinfo" id="footerContainer">

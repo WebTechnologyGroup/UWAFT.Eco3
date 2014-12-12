@@ -19,11 +19,11 @@ include_once "includes/utilities.php";
         <meta name="author" content="<?php if (isset($page_author)) echo $page_author; ?>">
         <!-- echo all required meta data if page's meta is set -->
         <?php
-        if (isset($page_meta) && is_array($page_meta)) {
-            foreach ($page_meta as $meta) {
-                echo $meta;
-            }
-        }
+if (isset($page_meta) && is_array($page_meta)) {
+    foreach ($page_meta as $meta) {
+        echo $meta;
+    }
+}
         ?>
 
         <link rel="icon" href="../../favicon.ico">
@@ -36,30 +36,30 @@ include_once "includes/utilities.php";
 
         <!-- echo all required css if page's css is set -->
         <?php
-        if (isset($page_css) && is_array($page_css)) {
-            foreach ($page_css as $css) {
-                echo $css;
-            }
-        }
+if (isset($page_css) && is_array($page_css)) {
+    foreach ($page_css as $css) {
+        echo $css;
+    }
+}
 
-        //echo javascript files
-        if (isset($page_js) && is_array($page_js)) {
-            foreach ($page_js as $js) {
-                echo $js;
-            }
-        }
+//echo javascript files
+if (isset($page_js) && is_array($page_js)) {
+    foreach ($page_js as $js) {
+        echo $js;
+    }
+}
         ?>
 
         <link href="css/navbar-fixed-top.css" rel="stylesheet">
-        <link href="css/footer.css" rel="stylesheet">
         <link href="css/font-awesome.css" rel="stylesheet">
+        <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
 
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
     </head>
     <body>
         <script>
@@ -69,63 +69,60 @@ include_once "includes/utilities.php";
         </script>
         <!-- Fixed navbar -->
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-                <div class="navbar-header">
-                    <a class="navbar-brand" rel="home" href="index.php" title="UWAFT">
-                        <img id="logo" src="images/ecologo.png">
-                    </a>
-                    <!--<a id="pageTitle" class="navbar-brand" href="#">UWAFT</a>-->
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <!--<li <?php if (getCurrentFilename() == "index.php") echo "class=\"active\"" ?>><a href="index.php">Home</a></li>-->
-                        
-                        <li class="dropdown <?php if (getCurrentFilename() == "aboutUs.php") echo "active"; ?>">
-                            <a href="aboutUs.php" class="dropdown-toggle">About us<span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="aboutUs.php#services">History</a></li>
-                                <li><a href="aboutUs.php#missionVision">Our Mission and Vission</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown <?php if (getCurrentFilename() == "carpage.php") echo "active" ?> ">
-                            <a href="carpage.php" class="dropdown-toggle">Our Fleet<span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="carPage.php#present">201? Chevrolet Camaro</a></li>
-                                <li><a href="carPage.php#2013">2013 Chevrolet Malibu</a></li>
-                                <li><a href="carPage.php#2009">2009 Saturn Vue</a></li>
-                                <li><a href="carPage.php#2005">2005 Chevrolet Equinox</a></li>
-                                <li><a href="carPage.php#1999">1999 Chevrolet Silverado</a></li>
-                            </ul>
-                        </li>
-                        <li <?php if (getCurrentFilename() == "teampage.php") echo "class=\"active\""; ?>><a href="teampage.php">Team</a></li>
-                        <li class="dropdown <?php if (getCurrentFilename() == "publicEvent.php") echo "active"; ?>">
-                            <a href="publicEvent.php" class="dropdown-toggle">Calendar<span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li  <?php if (getCurrentFilename() == "publicEvent.php") echo "class=\"active\"" ?>><a href="publicEvent.php">Public Events</a></li>
-                                <li><a href="teamSchedule.php">Team Schedule</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle">Resources <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Environment and Sustainability</a></li>
-                                <li><a href="#">Benefits of hybrids</a></li>
-                                <li><a href="#">Classroom tools</a></li>
-                                <li><a href="savingCal.php">Savings Calculator</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle">Our Sponsors<span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Competition Sponsors</a></li>
-                                <li><a href="#">UWAFT Sponsors</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Want to Sponsor UWAFT</a>
-                                </li>
-                            </ul>
-                        </li>
-			             <li><a href="/blog/wordpress/">Blog</a></li>
-                    </ul>
-                    
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" rel="home" href="index.php" title="UWAFT">
+                    <img id="logo" src="images/ecologo.png">
+                </a>
+                <!--<a id="pageTitle" class="navbar-brand" href="#">UWAFT</a>-->
+            </div>
+            <div class="navbar-collapse collapse" id="navbar">
+                <ul class="nav navbar-nav">
+
+                    <li class="dropdown <?php if (getCurrentFilename() == "aboutUs.php") echo "active"; ?>">
+                        <a href="aboutUs.php" class="dropdown-toggle" data-toggle="dropdown">About us<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="aboutUs.php">History</a></li>
+                            <li><a href="aboutUs.php#missionVision">Our Mission and Vission</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown <?php if (getCurrentFilename() == "carPage.php") echo "active" ?> ">
+                        <a href="carpage.php" class="dropdown-toggle" data-toggle="dropdown">Our Fleet<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="carPage.php">Our Products</a></li>
+                            <li><a href="carPage.php#present">201? Chevrolet Camaro</a></li>
+                            <li><a href="carPage.php#2013">2013 Chevrolet Malibu</a></li>
+                            <li><a href="carPage.php#2009">2009 Saturn Vue</a></li>
+                            <li><a href="carPage.php#2005">2005 Chevrolet Equinox</a></li>
+                            <li><a href="carPage.php#1999">1999 Chevrolet Silverado</a></li>
+                        </ul>
+                    </li>
+                    <li <?php if (getCurrentFilename() == "teampage.php") echo "class=\"active\""; ?>><a href="teampage.php">Team</a></li>
+                    <li class="dropdown <?php if (getCurrentFilename() == "publicEvent.php" || getCurrentFilename() == "teamSchedule.php") echo "active"; ?>">
+                        <a href="publicEvent.php" class="dropdown-toggle" data-toggle="dropdown">Calendar<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li  <?php if (getCurrentFilename() == "publicEvent.php") echo "class=\"active\"" ?>><a href="publicEvent.php">Public Events</a></li>
+                            <li <?php if (getCurrentFilename() == "teamSchedule.php") echo "class=\"active\"" ?>><a href="teamSchedule.php">Team Schedule</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown <?php if (getCurrentFilename() == "savingCal.php") echo "active"; ?>">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Environment and Sustainability</a></li>
+                            <li><a href="#">Benefits of hybrids</a></li>
+                            <li><a href="#">Classroom tools</a></li>
+                            <li <?php if (getCurrentFilename() == "savingCal.php") echo "class=\"active\"" ?>><a href="savingCal.php">Savings Calculator</a></li>
+                        </ul>
+                    </li>
+                    <li <?php if (getCurrentFilename() == "sponsorship.php") echo "class=\"active\""; ?>><a href="sponsorship.php">Our Sponsors</a></li>
+                    <li><a href="/wordpress/">Blog</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
                     <!-- search form -->
                     <form class="navbar-form navbar-right form-inline" role="search" action="http://www.google.ca/search" method="GET" style="margin-right:10px;">
                         <div class="form-group has-feedback">
@@ -133,13 +130,8 @@ include_once "includes/utilities.php";
                             <span class="glyphicon glyphicon-search form-control-feedback"></span>
                         </div>
                     </form>
-                    <!--<ul class="nav navbar-nav navbar-right">
-                        <li><a href="/blog/wordpress/">Blog</a></li>
-                        <li><a href="#contact">Contact us</a></li>-->
-                        <!--<li class="active"><a href="./">Fixed top</a></li>
-                    </ul>-->
-                    
-                </div><!--/.nav-collapse -->
+                </ul>
+            </div><!--/.nav-collapse -->
         </div>
 
 

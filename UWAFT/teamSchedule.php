@@ -5,7 +5,6 @@ $page_title = "Team Schedule";
 $page_author = "Weiwei Chen";
 $page_description = "This it the UWAFT team schedule";
 //put each needed css link as a element in this array
-$page_css = array("<link href=\"css/carousel.css\" rel=\"stylesheet\">");
 //put each needed meta data as a element in this array
 $page_meta = array();
 //put needed javascript script here
@@ -14,7 +13,6 @@ include_once "includes/header.php"
 ?>
 <link href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.0.2/fullcalendar.css" rel="stylesheet" type="text/css" />
 <link href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.0.2/fullcalendar.print.css" rel="stylesheet" type="text/css" media='print' />
-<link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
 <div class="container needSpaceBetweenHeader">
     <section class="content-header">
         <h1>
@@ -41,7 +39,7 @@ include_once "includes/header.php"
 <?php
     include_once "includes/footer.php"
 ?>
-<script src="//code.jquery.com/ui/1.11.1/jquery-ui.min.js" type="text/javascript"></script>
+<script src="js/jquery-ui.min.js" type="text/javascript"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.0.2/fullcalendar.min.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -66,8 +64,8 @@ include_once "includes/header.php"
                 right: 'month,agendaWeek,agendaDay'
             },
             buttonText: {//This is to add icons to the visible buttons
-                prev: "Previous",
-                next: "Next",
+                prev: "previous",
+                next: "next",
                 today: 'today',
                 month: 'month',
                 week: 'week',
@@ -91,10 +89,10 @@ include_once "includes/header.php"
                             echo "end: convertDateTimeToJSDateTime(\"".$row["EndDate"] ."\"),";
                             echo "backgroundColor: \"". $row["Color"] ."\",";
                             echo "borderColor: \"". $row["Color"] ."\"";
-                            if(isset($row["AllDate"])&&$row["AllDate"]!= null){
-                                if($row["AllDate"] == 1)$alldate = "true";
-                                else $alldate = "false";
-                                echo ", allDay: ".$alldate;
+                            if(isset($row["AllDay"])&&$row["AllDay"]!= null){
+                                if($row["AllDay"] == 1)$allday = "true";
+                                else $allday = "false";
+                                echo ", allDay: ".$allday;
                             } 
                             if(isset($row["url"])&&$row["url"]!= null) echo ", url: '".$row["url"] . "'";
                             echo "}";
@@ -108,31 +106,7 @@ include_once "includes/header.php"
             ],
             editable: false,
             droppable: false, // this allows things to be dropped onto the calendar !!!
-            drop: function(date, allDay) { // this function is called when something is dropped
-
-                // retrieve the dropped element's stored Event Object
-                var originalEventObject = $(this).data('eventObject');
-
-                // we need to copy it, so that multiple events don't have a reference to the same object
-                var copiedEventObject = $.extend({}, originalEventObject);
-
-                // assign it the date that was reported
-                copiedEventObject.start = date;
-                copiedEventObject.allDay = allDay;
-                copiedEventObject.backgroundColor = $(this).css("background-color");
-                copiedEventObject.borderColor = $(this).css("border-color");
-
-                // render the event on the calendar
-                // the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
-                $('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
-
-                // is the "remove after drop" checkbox checked?
-                if ($('#drop-remove').is(':checked')) {
-                    // if so, remove the element from the "Draggable Events" list
-                    $(this).remove();
-                }
-
-            }
+            
         });
     });
 </script>

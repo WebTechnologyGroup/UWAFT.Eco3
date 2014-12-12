@@ -13,13 +13,8 @@
         <meta charset="UTF-8">
         <title>UWAFT | Calendar</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-        <!-- Ionicons -->
-        <link href="//code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet" type="text/css" />
-        <!-- fullCalendar -->
-        <link href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.0.2/fullcalendar.css" rel="stylesheet" type="text/css" />
-        <link href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.0.2/fullcalendar.print.css" rel="stylesheet" type="text/css" media='print' />
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../css/font-awesome.css" rel="stylesheet" type="text/css" />
         <!-- Theme style -->
         <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
         <link href="css/publicEvent.css" rel="stylesheet" type="text/css" />
@@ -31,17 +26,20 @@
         <![endif]-->
 
         <script>
+            function isEmpty(input){
+                return input.trim() == "";
+            }
             function isEventFormValid()
             {
                 var errors = new Array();
                 var errorMessage = "Please correctly provide the following information. \n";
 
                 var form = document.getElementById("eventForm");
-                if (form.title.value == "")
+                if (isEmpty(form.title.value))
                     errors.push("title");
-                if (form.date.value == "")
+                if (isEmpty(form.date.value))
                     errors.push("date");
-                if (form.time.value == "")
+                if (isEmpty(form.time.value))
                     errors.push("time");
                 if (errors.length !== 0)
                 {
@@ -66,10 +64,10 @@
 
         if (isset($_POST["type"]) && isset($_POST["title"]) && isset($_POST["date"]) && isset($_POST["time"])) {
             if ($_POST["type"] == "add") {
-                $title = $_POST["title"];
-                $message = $_POST["message"];
-                $date = $_POST["date"];
-                $time = $_POST["time"];
+                $title = trim($_POST["title"]);
+                $message = trim($_POST["message"]);
+                $date = trim($_POST["date"]);
+                $time = trim($_POST["time"]);
 
 
                 if (addNewPublicEvent($title, $date, $time, $message)) {
@@ -127,7 +125,7 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li>
-                            <a href="teamScheduleManagement.html">
+                            <a href="teamScheduleManagement.php">
                                 <i class="fa fa-dashboard"></i> <span>Team Schedule</span>
                             </a>
                         </li>
@@ -136,7 +134,11 @@
                                 <i class="fa fa-calendar"></i> <span>Public Events</span>
                             </a>
                         </li>
-
+                        <li>
+                            <a href="teamform.php">
+                                <i class="fa fa-user"></i> <span>Team Members</span>
+                            </a>
+                        </li>
                     </ul>
                 </section>
                 <!-- /.sidebar -->
@@ -165,7 +167,7 @@
                         <section class="col-lg-12 connectedSortable"> 
 
                             <!-- Map box -->
-                            <div class="box box-solid bg-light-blue-gradient">
+                            <div class="box box-primary">
                                 <div class="box-header">
                                     <!-- tools box -->
                                     <div class="pull-right box-tools">
@@ -222,13 +224,13 @@
                                 </div>
                                 <div class="box-body">
 
-                                    <table class="eventTable">
+                                    <table class="table table-striped eventTable">
                                         <tr>
                                             <th style='width: 20%;'>Title</th>
-                                            <th style='width: 55%;'>Message</th> 
+                                            <th style='width: 50%;'>Message</th> 
                                             <th>Date</th>
                                             <th>Time</th>
-                                            <th></th>
+                                            <th>Actions</th>
                                             <?php
                                             $result = getPublicEvents();
                                             if ($result->num_rows > 0) {
@@ -241,7 +243,7 @@
                                                     <td><?php echo $row["Message"]; ?></td>
                                                     <td><?php echo $row["Date"]; ?></td>
                                                     <td><?php echo $row["Time"]; ?></td>
-                                                    <td><button class="btn btn-primary btn-sm editButton" data-toggle="modal" data-target="#editModal" id="<?php echo "editButton" . $row["PublicEventID"]; ?>">Edit</button>  
+                                                    <td><!--<button class="btn btn-primary btn-sm editButton" data-toggle="modal" data-target="#editModal" id="<?php echo "editButton" . $row["PublicEventID"]; ?>">Edit</button>  -->
                                                         <button class="btn btn-primary btn-sm deleteButton" id="<?php echo "deleteButton" . $row["PublicEventID"]; ?>">Delete</button> </td>
 
                                                 </tr>
@@ -261,9 +263,9 @@
             </aside><!-- /.right-side -->
         </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="//code.jquery.com/ui/1.11.1/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-2.1.1.min.js"></script>
+        <script src="../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui.min.js" type="text/javascript"></script>
         <script>
                             $('#saveButton').click(function () {
                                 $('#eventForm').submit();

@@ -6,8 +6,8 @@
 		         
 		         Revision History
 		                Thida Pao, 2014.11.02: Complete redesign of Car Page
-				Terene,    2014.11.05: re-organized the html page to php with header and footer
-		                Thida Pao, 2014.12.05: Rearranged layout changed placeholder images
+						Terene,    2014.11.05: re-organized the html page to php with header and footer
+		                
 		-->
 	<?php
 //inital setup for this page, this has to be set before include header
@@ -23,7 +23,7 @@ $page_js = array();
 include_once "includes/header.php";
 ?>
 
-<link rel="stylesheet" type="text/css" href="./css/timeline.css">
+<link rel="stylesheet" type="text/css" href="css/timeline.css">
 
 </head>
 
@@ -94,7 +94,7 @@ include_once "includes/header.php";
 
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-lg-6" id="1999">
           <h2 class="featurette-heading">&nbsp</h2>          
           <p class="lead"> Come see for yourself <br />Make an appointment or reserve a spot
           <a href="aboutus.php"><i class="glyphicon glyphicon-question-sign"></i></a>
@@ -104,7 +104,7 @@ include_once "includes/header.php";
       </div>
 
 
-      <div class="row featurette">
+      <div class="row featurette" id="2005">
         <div class="col-md-7">
           <h2 class="featurette-heading"><span class="text-muted">1999</span> Chevrolet Silverado</h2>
           <p >Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
@@ -114,7 +114,7 @@ include_once "includes/header.php";
         </div>
       </div>
 
-      <hr class="featurette-divider">
+      <hr class="featurette-divider" id="2009">
 
       <div class="row featurette">
         <div class="col-md-5">
@@ -126,7 +126,7 @@ include_once "includes/header.php";
         </div>
       </div>
 
-      <hr class="featurette-divider">
+      <hr class="featurette-divider" id="2013">
 
       <div class="row featurette">
         <div class="col-md-7">
@@ -138,7 +138,7 @@ include_once "includes/header.php";
         </div>
       </div>
 
-     <hr class="featurette-divider">
+     <hr class="featurette-divider" id="present">
 
       <div class="row featurette">
         <div class="col-md-5">

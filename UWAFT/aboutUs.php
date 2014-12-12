@@ -7,7 +7,7 @@
  */
 
 $page_title = "About US";
-$page_author = "Weiwei Chen";
+$page_author = "Alexey Rusev & Weiwei Chen";
 $page_description = "This page presents what we do";
 //put each needed css link as a element in this array
 //put each needed meta data as a element in this array

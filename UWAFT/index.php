@@ -11,7 +11,7 @@
 <?php
 //inital setup for this page, this has to be set before include header
 $page_title = "UWAFT Home";
-$page_author = "Weiwei Chen";
+$page_author = "Alexey Rusev";
 $page_description = "This it the UWAFT home page";
 //put each needed css link as a element in this array
 $page_css = array("<link href=\"css/carousel.css\" rel=\"stylesheet\">");
@@ -84,19 +84,19 @@ include_once "includes/header.php";
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <img class="img-circle" src="images/car1.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <img class="img-circle" src="images/carModel.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
           <h2>Our Fleet</h2>
           <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
           <p><a class="btn btn-default" href="CarPage.php" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="images/info3.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <img class="img-circle" src="images/carModel2.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
           <h2>Our Team</h2>
           <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
           <p><a class="btn btn-default" href="TeamPage.php" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="images/car1.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <img class="img-circle" src="images/background_Without_Filters.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
           <h2>Blog</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
           <p><a class="btn btn-default" href="wordpress/index.php" role="button">View details &raquo;</a></p>

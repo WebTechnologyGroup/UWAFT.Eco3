@@ -315,12 +315,27 @@ include_once 'includes/footer.php';
             $("#workCompa").text(isWorkCompatible(chosenCar));
         }
         //hybird plugin
-        else if(chosenCar == "oyota Prius Plug in" || chosenCar == "Chevrolet Volt" || chosenCar == "Ford C-Max Plug in" || chosenCar == "BMW i3 REx"){
+        else if(chosenCar == "Toyota Prius Plug in" || chosenCar == "Chevrolet Volt" || chosenCar == "Ford C-Max Plug in" || chosenCar == "BMW i3 REx"){
+            var petrolBill = calculatePetrolBill(2, chosenCar);
+            var elecBill = calculateElectricBill(2, chosenCar);
+            var totalBill = petrolBill + elecBill;
             
+            $("#petrolBill").text('$'+petrolBill);
+            $("#eleBill").text('$'+elecBill);
+            $("#totalBill").text('$'+ totalBill.toFixed(2));
+            $("#saving").text('$'+(currentBill - totalBill).toFixed(2));
+            $("#costPayback").text('$'+calculateAddCostPayback(chosenCar, currentBill - totalBill).toFixed(2));
+            $("#workCompa").text(isWorkCompatible(chosenCar));
         }
         //electric car
         else if(chosenCar == "Ford Focus Electric" || chosenCar == "BMW i3" || chosenCar == "Nissan Leaf" || chosenCar == "Telsa Model S 60kWh" || chosenCar == "Telsa Model S 85kWh"){
-            
+            var bill = calculateElectricBill(3, chosenCar);
+            $("#petrolBill").text('$0.00');
+            $("#eleBill").text('$'+bill);
+            $("#totalBill").text('$'+bill);
+            $("#saving").text('$'+(currentBill - bill).toFixed(2));
+            $("#costPayback").text('$'+calculateAddCostPayback(chosenCar, currentBill - bill).toFixed(2));
+            $("#workCompa").text(isWorkCompatible(chosenCar));
         }
     });
     

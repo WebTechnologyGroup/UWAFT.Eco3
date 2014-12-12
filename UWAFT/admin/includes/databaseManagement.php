@@ -36,9 +36,14 @@ function managePublicEvent($sql){
     $result = $link->query($sql);
     if ($result !== TRUE) {
         echo "Error: " . $link->error;
-    } echo "testtttt";
+    }
     $link->close();
     return $result;
 }
 
+function addNewScheduleToDB($title, $start, $end, $allDay, $url, $color){
+    if($url!="null")$sql = "insert into TeamSchedule (Title, StartDate, EndDate, AllDay, url, Color)  VALUES('{$title}', '{$start}', '{$end}', {$allDay}, '{$url}', '#{$color}')"; 
+    else $sql = "insert into TeamSchedule (Title, StartDate, EndDate, AllDay, Color)  VALUES('{$title}', '{$start}', '{$end}', {$allDay}, '#{$color}')";
+    return managePublicEvent($sql);
+}
 ?>
