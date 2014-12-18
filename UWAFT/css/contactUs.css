@@ -1,0 +1,36 @@
+header {
+height: 737px;
+text-align: center;
+color: white;
+background-image: url(/images/threecar.jpg);
+-webkit-background-size: cover;
+background-size: cover;
+background-position:center;
+}
+.lead-in {
+margin-top: 270px;
+margin-bottom: 20px;
+font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 40px;
+font-style: italic;
+line-height: 40px;
+}
+.heading {
+margin-bottom: 50px;
+font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 75px;
+font-weight: 700;
+line-height: 75px;
+}
+.sideleft {
+clear: both;
+width: 65%;
+float: left;
+margin-top: 50px;
+padding: 0 20px 0 0;
+border-right: solid 1px #ccc;
+}
+.sideright {
+float: right;
+margin-top: 50px;
+}

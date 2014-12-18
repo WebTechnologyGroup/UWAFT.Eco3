@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <p class="pull-right"><a href="#">Back to top</a></p>
-                        <p>&copy; 2014 UWAFT. All rights reserved. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a> &middot; <a href="#contact">Contact us</a></p>
+                        <p>&copy; 2014 UWAFT. All rights reserved. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a> &middot; <a href="contactUs.php">Contact us</a></p>
                     </div>
                 </div>
                 <div class="row">
